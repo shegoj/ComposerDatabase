@@ -25,6 +25,11 @@ void Composer::set_last_name(string last_name)
     this->last_name_ = last_name;
 }
 
+string Composer::last_name()
+{
+    return this->last_name_;
+}
+
 void Composer::set_composer_genre(string composer_genre)
 {
     this->composer_genre_ = composer_genre;
@@ -76,10 +81,15 @@ void Composer::Promote(int increase)
 
 void Composer::Display()
 {
-    //cout << "Composer Details\n==============="<<endl;
+    //cout << "\nComposer Details\n==============="<<endl;
     cout << "Name:    "<< this->first_name_ << " " << this->last_name_ << endl;
     cout << "Genre:   "<< this->composer_genre_<< endl;
     cout << "Ranking: " << this->ranking_<< endl;
     cout << endl;
+}
+
+bool operator== (const Composer &c1, const Composer &c2)
+{
+    return (c1.last_name_ == c2.last_name_);
 }
 

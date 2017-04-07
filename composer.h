@@ -39,6 +39,10 @@ public:
     // Display composer details
     void Display ();
     
+    // Equal operator
+    //riend bool operator== (const Composer &c1, const Composer &c2);
+    friend bool operator== (const Composer &c1, const Composer &c2);
+    
     
 private:
   string first_name_;
